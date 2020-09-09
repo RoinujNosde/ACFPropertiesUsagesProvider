@@ -6,14 +6,10 @@
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.properties</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.roinujnosde.acfpropertiesusagesprovider.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.roinujnosde.acfpropertiesusagesprovider.services.MyProjectService"/>
+        <properties.implicitPropertyUsageProvider
+                implementation="com.github.roinujnosde.acfpropertiesusagesprovider.extentionpoints.ACFImplicitPropertyUsageProvider"/>
     </extensions>
-
-    <projectListeners>
-        <listener class="com.github.roinujnosde.acfpropertiesusagesprovider.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </projectListeners>
 </idea-plugin>

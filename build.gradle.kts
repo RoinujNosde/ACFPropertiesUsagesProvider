@@ -38,6 +38,7 @@ repositories {
     jcenter()
 }
 dependencies {
+    implementation(files("libs/properties.jar"))
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
 }
 
