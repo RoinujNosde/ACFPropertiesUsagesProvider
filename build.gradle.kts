@@ -38,7 +38,7 @@ repositories {
     jcenter()
 }
 dependencies {
-    implementation(files("libs/properties.jar"))
+//    implementation(files("libs/properties.jar"))
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
 }
 
@@ -54,7 +54,7 @@ intellij {
 //  Plugin Dependencies:
 //  https://www.jetbrains.org/intellij/sdk/docs/basics/plugin_structure/plugin_dependencies.html
 //
-//  setPlugins("java")
+    setPlugins("java", "properties")
 }
 
 // Configure detekt plugin.
